@@ -14,6 +14,19 @@
 		0E2B9AD120A083F0001780E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E2B9ACF20A083F0001780E4 /* LaunchScreen.storyboard */; };
 		0E2B9ADC20A089E2001780E4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E2B9ADB20A089E2001780E4 /* Localizable.strings */; };
 		0E2B9AE620A08B71001780E4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9AE520A08B71001780E4 /* Constants.swift */; };
+		0E2B9B0520A09758001780E4 /* Chef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9AFB20A09758001780E4 /* Chef.swift */; };
+		0E2B9B0620A09758001780E4 /* EventsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9AFC20A09758001780E4 /* EventsData.swift */; };
+		0E2B9B0720A09758001780E4 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9AFD20A09758001780E4 /* Price.swift */; };
+		0E2B9B0820A09758001780E4 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9AFE20A09758001780E4 /* Schedule.swift */; };
+		0E2B9B0920A09758001780E4 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9AFF20A09758001780E4 /* City.swift */; };
+		0E2B9B0A20A09758001780E4 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9B0020A09758001780E4 /* Location.swift */; };
+		0E2B9B0B20A09758001780E4 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9B0120A09758001780E4 /* Currency.swift */; };
+		0E2B9B0C20A09758001780E4 /* EventsPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9B0220A09758001780E4 /* EventsPagination.swift */; };
+		0E2B9B0D20A09758001780E4 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9B0320A09758001780E4 /* Image.swift */; };
+		0E2B9B0E20A09758001780E4 /* EventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9B0420A09758001780E4 /* EventItem.swift */; };
+		0E2B9B1320A09F3F001780E4 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9B1020A09F3F001780E4 /* Storyboards.swift */; };
+		0E2B9B1420A09F3F001780E4 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9B1120A09F3F001780E4 /* Strings.swift */; };
+		0E2B9B1520A09F79001780E4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9B0F20A09F3F001780E4 /* Images.swift */; };
 		FE6DAC350257928F24518B61 /* Pods_challenge_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42EB846D4093B2D9F3BC5B65 /* Pods_challenge_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +40,19 @@
 		0E2B9AD220A083F0001780E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E2B9ADB20A089E2001780E4 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		0E2B9AE520A08B71001780E4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0E2B9AFB20A09758001780E4 /* Chef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chef.swift; sourceTree = "<group>"; };
+		0E2B9AFC20A09758001780E4 /* EventsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsData.swift; sourceTree = "<group>"; };
+		0E2B9AFD20A09758001780E4 /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		0E2B9AFE20A09758001780E4 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		0E2B9AFF20A09758001780E4 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		0E2B9B0020A09758001780E4 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		0E2B9B0120A09758001780E4 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		0E2B9B0220A09758001780E4 /* EventsPagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsPagination.swift; sourceTree = "<group>"; };
+		0E2B9B0320A09758001780E4 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		0E2B9B0420A09758001780E4 /* EventItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventItem.swift; sourceTree = "<group>"; };
+		0E2B9B0F20A09F3F001780E4 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		0E2B9B1020A09F3F001780E4 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		0E2B9B1120A09F3F001780E4 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		3E8F73CF1E8C86A8B1BDBB0A /* Pods-challenge-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-challenge-ios/Pods-challenge-ios.release.xcconfig"; sourceTree = "<group>"; };
 		42EB846D4093B2D9F3BC5B65 /* Pods_challenge_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_challenge_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5BC16E7F387E2CDB030BD11 /* Pods-challenge-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-challenge-ios/Pods-challenge-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +120,9 @@
 		0E2B9ADD20A08A35001780E4 /* GeneratedFiles */ = {
 			isa = PBXGroup;
 			children = (
+				0E2B9B0F20A09F3F001780E4 /* Images.swift */,
+				0E2B9B1020A09F3F001780E4 /* Storyboards.swift */,
+				0E2B9B1120A09F3F001780E4 /* Strings.swift */,
 			);
 			path = GeneratedFiles;
 			sourceTree = "<group>";
@@ -101,6 +130,16 @@
 		0E2B9ADE20A08AAA001780E4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0E2B9AFB20A09758001780E4 /* Chef.swift */,
+				0E2B9AFF20A09758001780E4 /* City.swift */,
+				0E2B9B0120A09758001780E4 /* Currency.swift */,
+				0E2B9AFC20A09758001780E4 /* EventsData.swift */,
+				0E2B9B0220A09758001780E4 /* EventsPagination.swift */,
+				0E2B9B0320A09758001780E4 /* Image.swift */,
+				0E2B9B0420A09758001780E4 /* EventItem.swift */,
+				0E2B9B0020A09758001780E4 /* Location.swift */,
+				0E2B9AFD20A09758001780E4 /* Price.swift */,
+				0E2B9AFE20A09758001780E4 /* Schedule.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,7 +218,8 @@
 				0E2B9AC120A083EF001780E4 /* Resources */,
 				1D7EC49A84211D74B1E55CEC /* [CP] Embed Pods Frameworks */,
 				0E4C8AC3712020A7ACAF99AE /* [CP] Copy Pods Resources */,
-				0E2B9AD820A088DF001780E4 /* ShellScript */,
+				0E2B9AD820A088DF001780E4 /* SwiftGen */,
+				0E2B9B1620A0A00F001780E4 /* IncrementBuild */,
 			);
 			buildRules = (
 			);
@@ -238,18 +278,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0E2B9AD820A088DF001780E4 /* ShellScript */ = {
+		0E2B9AD820A088DF001780E4 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = SwiftGen;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# swiftgen bin from pods\nSWIFTGEN=\"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\n\n# Make sure it is there\nif which \"$SWIFTGEN\" >/dev/null; then\n\n# Folder for output\nSWIFTGEN_FOLDER=\"${PROJECT}/Resources/GeneratedFiles\"\n\n# Project folder\nPROJECT_FOLDER=\"${PROJECT}\"\n\n# Make sure output folder exists\nmkdir -p \"$SWIFTGEN_FOLDER\"\n\n# Get all storyboards into Storyboards.swift\n\"$SWIFTGEN\" storyboards -t swift4 \"$PROJECT_FOLDER\" --output \"$SWIFTGEN_FOLDER/Storyboards.swift\"\n\n# Get all images into Images.swift\n\"$SWIFTGEN\" xcassets -t swift4 \"$PROJECT_FOLDER/Resources/Assets.xcassets\" --output \"$SWIFTGEN_FOLDER/Images.swift\"\n\n# Get colors from Colors.txt into Colors.swift\n#\"$SWIFTGEN\" colors -t swift4 \"$PROJECT_FOLDER/Resources/Colors.txt\" --output \"$SWIFTGEN_FOLDER/Colors.swift\"\n\n# Get all fonts into Fonts.swift\n\"$SWIFTGEN\" fonts -t swift4 \"$PROJECT_FOLDER/Resources/Fonts\" --output \"$SWIFTGEN_FOLDER/Fonts.swift\"\n\n# Get all russian strings (as a base for all others) into Strings.swift\n\"$SWIFTGEN\" strings -t structured-swift4 \"$PROJECT_FOLDER/Resources/Localizable.strings\" --output \"$SWIFTGEN_FOLDER/Strings.swift\"\nelse\necho \"SwiftGen does not exist, download from https://github.com/AliSoftware/SwiftGen\"\nfi";
+		};
+		0E2B9B1620A0A00F001780E4 /* IncrementBuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = IncrementBuild;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#   Increment build number\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
 		};
 		0E4C8AC3712020A7ACAF99AE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -332,8 +387,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E2B9AC920A083EF001780E4 /* ViewController.swift in Sources */,
+				0E2B9B0D20A09758001780E4 /* Image.swift in Sources */,
+				0E2B9B1420A09F3F001780E4 /* Strings.swift in Sources */,
+				0E2B9B0620A09758001780E4 /* EventsData.swift in Sources */,
 				0E2B9AC720A083EF001780E4 /* AppDelegate.swift in Sources */,
 				0E2B9AE620A08B71001780E4 /* Constants.swift in Sources */,
+				0E2B9B0C20A09758001780E4 /* EventsPagination.swift in Sources */,
+				0E2B9B1320A09F3F001780E4 /* Storyboards.swift in Sources */,
+				0E2B9B0A20A09758001780E4 /* Location.swift in Sources */,
+				0E2B9B0E20A09758001780E4 /* EventItem.swift in Sources */,
+				0E2B9B0520A09758001780E4 /* Chef.swift in Sources */,
+				0E2B9B0B20A09758001780E4 /* Currency.swift in Sources */,
+				0E2B9B0820A09758001780E4 /* Schedule.swift in Sources */,
+				0E2B9B1520A09F79001780E4 /* Images.swift in Sources */,
+				0E2B9B0920A09758001780E4 /* City.swift in Sources */,
+				0E2B9B0720A09758001780E4 /* Price.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +548,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6826KUQN29;
-				INFOPLIST_FILE = "challenge-ios/Info.plist";
+				INFOPLIST_FILE = "challenge-ios/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -500,7 +568,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6826KUQN29;
-				INFOPLIST_FILE = "challenge-ios/Info.plist";
+				INFOPLIST_FILE = "challenge-ios/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
