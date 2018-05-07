@@ -29,6 +29,8 @@
 		0E2B9B1520A09F79001780E4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9B0F20A09F3F001780E4 /* Images.swift */; };
 		0E2B9B1820A0A1EE001780E4 /* ServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9B1720A0A1EE001780E4 /* ServerAPI.swift */; };
 		0E2B9B1A20A0A1FB001780E4 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9B1920A0A1FB001780E4 /* Network.swift */; };
+		0E2B9B1C20A0B136001780E4 /* EventsFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9B1B20A0B136001780E4 /* EventsFeedModel.swift */; };
+		0E2B9B1F20A0B2DB001780E4 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B9B1E20A0B2DB001780E4 /* LoadingState.swift */; };
 		FE6DAC350257928F24518B61 /* Pods_challenge_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42EB846D4093B2D9F3BC5B65 /* Pods_challenge_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		0E2B9B1120A09F3F001780E4 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		0E2B9B1720A0A1EE001780E4 /* ServerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAPI.swift; sourceTree = "<group>"; };
 		0E2B9B1920A0A1FB001780E4 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		0E2B9B1B20A0B136001780E4 /* EventsFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsFeedModel.swift; sourceTree = "<group>"; };
+		0E2B9B1E20A0B2DB001780E4 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		3E8F73CF1E8C86A8B1BDBB0A /* Pods-challenge-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-challenge-ios/Pods-challenge-ios.release.xcconfig"; sourceTree = "<group>"; };
 		42EB846D4093B2D9F3BC5B65 /* Pods_challenge_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_challenge_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5BC16E7F387E2CDB030BD11 /* Pods-challenge-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-challenge-ios/Pods-challenge-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				0E2B9AC620A083EF001780E4 /* AppDelegate.swift */,
+				0E2B9B1D20A0B2CA001780E4 /* Enums */,
 				0E2B9ADF20A08AC3001780E4 /* Extensions */,
 				0E2B9ADE20A08AAA001780E4 /* Models */,
 				0E2B9AE020A08ACC001780E4 /* Helpers */,
@@ -190,8 +195,17 @@
 		0E2B9AE420A08B24001780E4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0E2B9B1B20A0B136001780E4 /* EventsFeedModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0E2B9B1D20A0B2CA001780E4 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				0E2B9B1E20A0B2DB001780E4 /* LoadingState.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		38065B13412DAB7574B69056 /* Pods */ = {
@@ -404,12 +418,14 @@
 				0E2B9B0E20A09758001780E4 /* EventItem.swift in Sources */,
 				0E2B9B0520A09758001780E4 /* Chef.swift in Sources */,
 				0E2B9B0B20A09758001780E4 /* Currency.swift in Sources */,
+				0E2B9B1F20A0B2DB001780E4 /* LoadingState.swift in Sources */,
 				0E2B9B1820A0A1EE001780E4 /* ServerAPI.swift in Sources */,
 				0E2B9B0820A09758001780E4 /* Schedule.swift in Sources */,
 				0E2B9B1A20A0A1FB001780E4 /* Network.swift in Sources */,
 				0E2B9B1520A09F79001780E4 /* Images.swift in Sources */,
 				0E2B9B0920A09758001780E4 /* City.swift in Sources */,
 				0E2B9B0720A09758001780E4 /* Price.swift in Sources */,
+				0E2B9B1C20A0B136001780E4 /* EventsFeedModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
