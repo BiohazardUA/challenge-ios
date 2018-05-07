@@ -1,0 +1,9 @@
+//
+//  Constants.swift
+//  challenge-ios
+//
+//  Created by Vladislav Ternovskiy on 07.05.2018.
+//  Copyright © 2018 Vladislav Ternovskiy. All rights reserved.
+//
+
+import Foundation
