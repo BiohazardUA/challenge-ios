@@ -16,6 +16,7 @@ target 'challenge-ios' do
   pod 'Kingfisher'
   pod 'SwifterSwift’
   pod 'Hero'
+  pod 'Cosmos', '~> 15.0'
 
 end
 

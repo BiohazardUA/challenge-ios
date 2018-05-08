@@ -53,15 +53,15 @@ internal extension UIViewController {
 
 // swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
 internal enum StoryboardScene {
+  internal enum Events: StoryboardType {
+    internal static let storyboardName = "Events"
+
+    internal static let initialScene = InitialSceneType<challenge_ios.NavController>(storyboard: Events.self)
+  }
   internal enum LaunchScreen: StoryboardType {
     internal static let storyboardName = "LaunchScreen"
 
     internal static let initialScene = InitialSceneType<UIViewController>(storyboard: LaunchScreen.self)
-  }
-  internal enum Main: StoryboardType {
-    internal static let storyboardName = "Main"
-
-    internal static let initialScene = InitialSceneType<ViewController>(storyboard: Main.self)
   }
 }
 

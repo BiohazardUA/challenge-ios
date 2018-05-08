@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.2)
+  - Cosmos (15.0.0)
   - Hero (1.2.0)
   - Kingfisher (4.7.0)
   - Moya (10.0.2):
@@ -45,6 +46,7 @@ PODS:
   - SwiftGen (5.3.0)
 
 DEPENDENCIES:
+  - Cosmos (~> 15.0)
   - Hero
   - Kingfisher
   - Moya
@@ -59,6 +61,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Cosmos: a6dbd3d0baa0cc8f51f8598f7508d5a09d0a9ade
   Hero: 33dadf2cd1c98af71e213dcbc2902e6e03622a4e
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
@@ -72,6 +75,6 @@ SPEC CHECKSUMS:
   SwifterSwift: f3fce2b9fc5b9d8fda6eec33825e5243c60aebba
   SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
 
-PODFILE CHECKSUM: d9b37159a06e4c284d037c21b736ea7358cc1e0b
+PODFILE CHECKSUM: 6a78832c2cb7c18fe6f8edb312717da9a71069d3
 
 COCOAPODS: 1.4.0
