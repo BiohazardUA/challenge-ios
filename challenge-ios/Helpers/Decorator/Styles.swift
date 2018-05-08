@@ -87,6 +87,23 @@ struct Style {
       gl.locations = [0.0, 0.8]
       view.layer.insertSublayer(gl, at: 0)
     }
+    
+  }
+  
+  static func addGradientToCellBottom(topColor: UIColor, bottomColor: UIColor) -> Decoration<UIView> {
+    return { (view: UIView) in
+      let gl = CAGradientLayer()
+      var frame = view.bounds
+      frame.size = CGSize(width: UIScreen.main.bounds.width,
+                          height: view.height)
+      frame.origin = CGPoint(x: 0, y: frame.origin.y)
+      gl.frame = frame
+      let colorTop = topColor.cgColor
+      let colorBottom = bottomColor.cgColor
+      gl.colors = [colorTop, colorBottom]
+      gl.locations = [0.0, 0.8]
+      view.layer.insertSublayer(gl, at: 0)
+    }
    
   }
   
@@ -110,11 +127,11 @@ struct Style {
                         offsetY: CGFloat = 0.0,
                         cornerRadius: CGFloat = 0.0) -> Decoration<UIView> {
     return { (view: UIView) in
-      _ = view.subviews.map {
-        if $0.layer.cornerRadius == 0 {
-          $0.layer.cornerRadius = cornerRadius
-        }
-      }
+//      _ = view.subviews.map {
+//        if $0.layer.cornerRadius == 0 {
+//          $0.layer.cornerRadius = cornerRadius
+//        }
+//      }
       view.layer.shadowOpacity = opacity
       view.layer.shadowOffset = CGSize(width: offsetX, height: offsetY)
       view.layer.shadowRadius = 10

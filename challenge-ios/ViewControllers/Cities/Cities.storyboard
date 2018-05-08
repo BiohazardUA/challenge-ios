@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xdT-Kq-7d8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Nav Controller-->
+        <scene sceneID="uX5-SY-02Q">
+            <objects>
+                <navigationController id="xdT-Kq-7d8" customClass="NavController" customModule="challenge_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="u7d-Vj-DKj">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="SZY-Jk-dGh" kind="relationship" relationship="rootViewController" id="gUU-pj-MdW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n7n-vJ-9cH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-124" y="224"/>
+        </scene>
+        <!--Select you city-->
+        <scene sceneID="kBq-EX-0qp">
+            <objects>
+                <viewController storyboardIdentifier="CitiesViewController" id="SZY-Jk-dGh" customClass="CitiesViewController" customModule="challenge_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nge-qq-IX6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztA-MR-z2x" customClass="ButtonWithShadow" customModule="challenge_ios" customModuleProvider="target">
+                                <rect key="frame" x="28" y="211" width="319" height="51"/>
+                                <color key="backgroundColor" red="0.51216447350000005" green="0.70343714950000003" blue="0.34502050280000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ztA-MR-z2x" secondAttribute="height" multiplier="331:53" id="BIS-uq-fLd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                <state key="normal" title="Hambugh">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="city"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radiusOfCorners">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadowEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.51216447350000005" green="0.70343714950000003" blue="0.34502050280000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0, -200) duration(1.0)"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="hamburgTapped" destination="SZY-Jk-dGh" eventType="touchUpInside" id="NQV-KG-r01"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ap6-NK-LvK" customClass="ButtonWithShadow" customModule="challenge_ios" customModuleProvider="target">
+                                <rect key="frame" x="28" y="276" width="319" height="51"/>
+                                <color key="backgroundColor" red="0.51216447350000005" green="0.70343714950000003" blue="0.34502050280000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ap6-NK-LvK" secondAttribute="height" multiplier="331:53" id="07r-kc-9fx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                <state key="normal" title="Köln">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="city"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radiusOfCorners">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadowEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.51216447350000005" green="0.70343714950000003" blue="0.34502050280000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="kolnTapped" destination="SZY-Jk-dGh" eventType="touchUpInside" id="jJI-Ns-YdQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mya-th-eGX" customClass="ButtonWithShadow" customModule="challenge_ios" customModuleProvider="target">
+                                <rect key="frame" x="28" y="341" width="319" height="51"/>
+                                <color key="backgroundColor" red="0.51216447350000005" green="0.70343714950000003" blue="0.34502050280000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                <state key="normal" title="All">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="city"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radiusOfCorners">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadowEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.51216447350000005" green="0.70343714950000003" blue="0.34502050280000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0, 200) duration(1.0)"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="allTapped" destination="SZY-Jk-dGh" eventType="touchUpInside" id="nf9-H1-Poc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ap6-NK-LvK" firstAttribute="leading" secondItem="91W-KD-RtX" secondAttribute="leading" constant="28" id="7G2-TY-7YQ"/>
+                            <constraint firstItem="Mya-th-eGX" firstAttribute="leading" secondItem="ap6-NK-LvK" secondAttribute="leading" id="Cid-rL-n44"/>
+                            <constraint firstItem="ztA-MR-z2x" firstAttribute="centerX" secondItem="ap6-NK-LvK" secondAttribute="centerX" id="DLZ-uB-zx9"/>
+                            <constraint firstItem="ap6-NK-LvK" firstAttribute="centerY" secondItem="91W-KD-RtX" secondAttribute="centerY" id="Dao-4f-Y2e"/>
+                            <constraint firstItem="Mya-th-eGX" firstAttribute="top" secondItem="ap6-NK-LvK" secondAttribute="bottom" constant="14" id="EZ9-gy-7Ee"/>
+                            <constraint firstItem="ap6-NK-LvK" firstAttribute="top" secondItem="ztA-MR-z2x" secondAttribute="bottom" constant="14" id="Hsf-0u-Bsz"/>
+                            <constraint firstItem="Mya-th-eGX" firstAttribute="centerX" secondItem="ap6-NK-LvK" secondAttribute="centerX" id="IGL-op-j9c"/>
+                            <constraint firstItem="Mya-th-eGX" firstAttribute="width" secondItem="Mya-th-eGX" secondAttribute="height" multiplier="331:53" id="bSJ-XO-K4P"/>
+                            <constraint firstItem="ap6-NK-LvK" firstAttribute="centerX" secondItem="91W-KD-RtX" secondAttribute="centerX" id="cTc-3J-Kfm"/>
+                            <constraint firstItem="ztA-MR-z2x" firstAttribute="leading" secondItem="ap6-NK-LvK" secondAttribute="leading" id="pDG-wf-bEY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="91W-KD-RtX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select you city" id="h7T-ln-TjW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GrS-qh-4VV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="614" y="225"/>
+        </scene>
+    </scenes>
+</document>

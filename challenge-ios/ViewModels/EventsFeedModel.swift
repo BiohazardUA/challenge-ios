@@ -19,10 +19,15 @@ class EventsFeedModel: NSObject {
   private var loadingState: Variable<LoadingState?> = Variable(nil)
   private var events: Variable<[EventItem]?> = Variable(nil)
   private var lastPage : Variable<EventsPagination?> = Variable(nil)
-  private let itemsToFetch = 20
-  private let cityID = "59226f7d-501f-42dd-821f-80adfd929630"
+  private let itemsToFetch = 5
+  private var cityID: String!
   
-  override init() {
+  convenience init(cityID: CityID) {
+    self.init()
+    self.cityID = cityID.rawValue
+  }
+  
+  override private init() {
     loadingOutput = loadingState.asDriver().filterNil()
     eventsOutput = events.asObservable().filterNil()
     super.init()
@@ -48,12 +53,12 @@ class EventsFeedModel: NSObject {
     return Int(currentPageNumber) + 1
   }
   
-  private func getTotalEventsCount() -> Int {
-    return lastPage.value?.data?.count ?? 0
+  func getEventsCount() -> Int {
+    return events.value == nil ? 0 : events.value!.count
   }
   
-  private func getEventsCount() -> Int {
-    return events.value == nil ? 0 : events.value!.count
+  private func getTotalEventsCount() -> Int {
+    return lastPage.value?.data?.count ?? 0
   }
   
   private func update(_ pagination: EventsPagination) {

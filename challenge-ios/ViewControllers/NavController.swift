@@ -21,6 +21,7 @@ class NavController: UINavigationController, UIGestureRecognizerDelegate {
     navigationBar.setTitleFont(UIFont.systemFont(ofSize: 17),
                                color: .white)
     navigationBar.barTintColor = .mainGreen
+    navigationBar.tintColor = .white
     interactivePopGestureRecognizer?.delegate = self
   }
   

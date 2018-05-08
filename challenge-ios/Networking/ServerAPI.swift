@@ -21,7 +21,11 @@ extension ServerAPI: TargetType {
   var path: String {
     switch self {
     case .fetchEvents(let limit, let pageNumber, let cityID):
-      return "/events?pageSize=\(limit)&pageNumber=\(pageNumber)&cityId=\(cityID)"
+      if cityID.isEmpty {
+        return "/events?pageSize=\(limit)&pageNumber=\(pageNumber)"
+      } else {
+        return "/events?pageSize=\(limit)&pageNumber=\(pageNumber)&cityId=\(cityID)"
+      }
     }
   }
   

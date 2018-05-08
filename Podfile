@@ -17,6 +17,7 @@ target 'challenge-ios' do
   pod 'SwifterSwift’
   pod 'Hero'
   pod 'Cosmos', '~> 15.0'
+  pod 'SDVersion'
 
 end
 

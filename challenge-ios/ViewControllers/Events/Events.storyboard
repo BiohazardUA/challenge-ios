@@ -1,58 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="53m-ux-Jr8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="voa-fc-CPN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Events-->
-        <scene sceneID="xpS-CX-Zl7">
-            <objects>
-                <tableViewController id="O4M-rE-rCW" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zpa-Qp-Xle">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8XM-9h-DEd">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8XM-9h-DEd" id="A5y-wG-8YG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="O4M-rE-rCW" id="ALN-gG-EOf"/>
-                            <outlet property="delegate" destination="O4M-rE-rCW" id="UO8-bM-vAt"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Events" id="wFY-WF-Ybo"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JIy-GW-mbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="380" y="77"/>
-        </scene>
         <!--Nav Controller-->
         <scene sceneID="92i-mE-Pr8">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hp9-FU-cjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="53m-ux-Jr8" customClass="NavController" customModule="challenge_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zWM-7h-bkc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="zWM-7h-bkc">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="O4M-rE-rCW" kind="relationship" relationship="rootViewController" id="qK2-Zi-MT9"/>
+                        <segue destination="voa-fc-CPN" kind="relationship" relationship="rootViewController" id="kF4-6A-RLM"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hp9-FU-cjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-366" y="77"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="c1H-40-Zaw">
+            <objects>
+                <viewController storyboardIdentifier="EventsViewController" id="voa-fc-CPN" customClass="EventsViewController" customModule="challenge_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pCV-zI-tkV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BT7-zw-P48">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.94500499959999995" green="0.94516319039999996" blue="0.94498413800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BT7-zw-P48" firstAttribute="trailing" secondItem="0KM-v9-vml" secondAttribute="trailing" id="4yt-LM-H1w"/>
+                            <constraint firstItem="BT7-zw-P48" firstAttribute="leading" secondItem="0KM-v9-vml" secondAttribute="leading" id="Fcd-fX-QSz"/>
+                            <constraint firstItem="BT7-zw-P48" firstAttribute="bottom" secondItem="0KM-v9-vml" secondAttribute="bottom" id="Zyp-fT-7Ig"/>
+                            <constraint firstItem="BT7-zw-P48" firstAttribute="top" secondItem="0KM-v9-vml" secondAttribute="top" id="fbh-fa-VKC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0KM-v9-vml"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Events" id="GkF-B7-dFG"/>
+                    <connections>
+                        <outlet property="tableView" destination="BT7-zw-P48" id="Bla-GN-RXa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ttx-p1-l9m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424.80000000000001" y="76.911544227886068"/>
         </scene>
     </scenes>
 </document>
