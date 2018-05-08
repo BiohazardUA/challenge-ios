@@ -6,24 +6,119 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Event View Controller-->
         <scene sceneID="x4v-So-mXe">
             <objects>
-                <viewController id="tsw-Jg-eYC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventViewController" id="tsw-Jg-eYC" customClass="EventViewController" customModule="challenge_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fzO-K0-Xen">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vv2-FK-yH5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="249"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vv2-FK-yH5" secondAttribute="height" multiplier="125:83" id="NXz-gH-l0R"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MR6-fI-zSh">
+                                <rect key="frame" x="15" y="299.5" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MR6-fI-zSh" secondAttribute="height" multiplier="1:1" id="kXE-de-dnc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="kfa-yD-Obw">
+                                <rect key="frame" x="82" y="308" width="278" height="38"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yo9-h6-KwC">
+                                        <rect key="frame" x="0.0" y="0.0" width="278" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1J-Eh-G9Y">
+                                        <rect key="frame" x="0.0" y="21" width="278" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Dh-So-2jU">
+                                <rect key="frame" x="15" y="264" width="345" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="MR6-fI-zSh" firstAttribute="top" secondItem="8Dh-So-2jU" secondAttribute="bottom" constant="15" id="J0k-5a-Sib"/>
+                            <constraint firstItem="Vv2-FK-yH5" firstAttribute="trailing" secondItem="aPg-uQ-leW" secondAttribute="trailing" id="N5e-IY-lf2"/>
+                            <constraint firstItem="kfa-yD-Obw" firstAttribute="centerY" secondItem="MR6-fI-zSh" secondAttribute="centerY" id="QE5-HE-S0e"/>
+                            <constraint firstItem="aPg-uQ-leW" firstAttribute="trailing" secondItem="8Dh-So-2jU" secondAttribute="trailing" constant="15" id="TEc-gs-CDE"/>
+                            <constraint firstItem="aPg-uQ-leW" firstAttribute="trailing" secondItem="kfa-yD-Obw" secondAttribute="trailing" constant="15" id="Vd0-r6-Dab"/>
+                            <constraint firstItem="8Dh-So-2jU" firstAttribute="leading" secondItem="aPg-uQ-leW" secondAttribute="leading" constant="15" id="gA9-GR-00m"/>
+                            <constraint firstItem="MR6-fI-zSh" firstAttribute="height" secondItem="Vv2-FK-yH5" secondAttribute="height" multiplier="0.22" id="igJ-qW-8T5"/>
+                            <constraint firstItem="Vv2-FK-yH5" firstAttribute="top" secondItem="aPg-uQ-leW" secondAttribute="top" id="j2O-VG-Ijr"/>
+                            <constraint firstItem="8Dh-So-2jU" firstAttribute="top" secondItem="Vv2-FK-yH5" secondAttribute="bottom" constant="15" id="jMR-Sc-h9N"/>
+                            <constraint firstItem="kfa-yD-Obw" firstAttribute="leading" secondItem="MR6-fI-zSh" secondAttribute="trailing" constant="12" id="lnT-gx-5uv"/>
+                            <constraint firstItem="Vv2-FK-yH5" firstAttribute="leading" secondItem="aPg-uQ-leW" secondAttribute="leading" id="sUi-a6-WAr"/>
+                            <constraint firstItem="MR6-fI-zSh" firstAttribute="leading" secondItem="aPg-uQ-leW" secondAttribute="leading" constant="15" id="xll-k7-kAM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aPg-uQ-leW"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="superView"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Fm2-Pp-DYM" appends="YES" id="NyG-ZG-Pvx"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="uDf-XM-0K1"/>
+                    <connections>
+                        <outlet property="chefAvatarView" destination="MR6-fI-zSh" id="YH7-uj-3IO"/>
+                        <outlet property="chefNameLabel" destination="Yo9-h6-KwC" id="PYO-oD-0eY"/>
+                        <outlet property="dateOfCreationLabel" destination="e1J-Eh-G9Y" id="B8y-od-Y15"/>
+                        <outlet property="eventImageView" destination="Vv2-FK-yH5" id="ROD-ca-bpK"/>
+                        <outlet property="eventTitleLabel" destination="8Dh-So-2jU" id="ZN3-Uz-fC3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FhR-zO-NC9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="Fm2-Pp-DYM">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="screenEdgePaned:" destination="tsw-Jg-eYC" id="Tlr-OK-Ht2"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="231" y="168"/>
+            <point key="canvasLocation" x="229.59999999999999" y="167.76611694152925"/>
+        </scene>
+        <!--Nav Controller-->
+        <scene sceneID="KjQ-4Z-L2J">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yAj-G7-bSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="4fb-3y-JQj" customClass="NavController" customModule="challenge_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="iL0-TH-bwE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tsw-Jg-eYC" kind="relationship" relationship="rootViewController" id="REt-5U-baH"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-526" y="168"/>
         </scene>
     </scenes>
 </document>

@@ -71,6 +71,8 @@ class EventsViewController: TransitionViewController {
                                            animated: true)
         }
         //TODO:- show single event
+        let vc = EventViewController.storyboardInstance(with: event)
+        strongSelf.show(vc)
       })
       .disposed(by: rx.disposeBag)
     

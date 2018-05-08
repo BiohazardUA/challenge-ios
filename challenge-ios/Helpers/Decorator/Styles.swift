@@ -177,26 +177,6 @@ struct Style {
   }
 }
 
-struct Helper {
-  
-  static func setFormatedDate(from timestamp: Double) -> Decoration<UILabel> {
-    return { (timeLabel: UILabel) in
-      let date = Date(unixTimestamp: timestamp)
-      let calendar = Calendar.current
-      let isToday = calendar.isDateInToday(date)
-      if isToday {
-        let hours = calendar.component(.hour, from: date)
-        let minutes = calendar.component(.minute, from: date)
-        let formatedHours = hours < 10 ? "0\(hours)" : "\(hours)"
-        let formatedMinutes = minutes < 10 ? "0\(minutes)" : "\(minutes)"
-        timeLabel.text = "\(formatedHours):\(formatedMinutes)"
-      } else {
-        timeLabel.text = date.string(withFormat: "dd MMM yyyy")
-      }
-    }
-  }
-}
-
 
 
 

@@ -8,28 +8,46 @@
 
 import UIKit
 
-class EventViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class EventViewController: TransitionViewController {
+  @IBOutlet private weak var eventTitleLabel: UILabel!
+  @IBOutlet private weak var eventImageView: UIImageView!
+  @IBOutlet private weak var chefAvatarView: UIImageView!
+  @IBOutlet private weak var chefNameLabel: UILabel!
+  @IBOutlet private weak var dateOfCreationLabel: UILabel!
+  private var event: EventItem!
+  
+  static func storyboardInstance(with event: EventItem) -> EventViewController {
+    let vc = StoryboardScene.CertainEvent.eventViewController.instantiate()
+    vc.event = event
+    return vc
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    refreshUI()
+  }
+  
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    chefAvatarView.cornerRadius = chefAvatarView.height / 2
+  }
+  
+  private func refreshUI() {
+    eventImageView.hero.id = event.id
+    eventTitleLabel.hero.id = event.id
+    if let imageLink = event.images?.first?.imageUrl {
+      eventImageView.kf.setImage(with: URL(string: imageLink),
+                                 options: [.transition(.fade(0.3))])
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    title = event.title
+    eventTitleLabel.text = event.title
+    if let chefAvatarLink = event.chef?.avatarUrl {
+      chefAvatarView.kf.setImage(with: URL(string: chefAvatarLink),
+                                 options: [.transition(.fade(0.3))])
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    chefNameLabel.text = event.chef?.firstName
+    let date = DateHelper.dateFrom(event.createdAt)
+    let formatedDate = DateHelper.format(date)
+    dateOfCreationLabel.text = formatedDate
+  }
 }

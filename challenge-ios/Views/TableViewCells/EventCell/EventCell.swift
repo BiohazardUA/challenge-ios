@@ -38,7 +38,9 @@ class EventCell: UITableViewCell {
       eventImageView.kf.setImage(with: URL(string: imageLink),
                                  options: [.transition(.fade(0.3))])
     }
+    eventImageView.hero.id = event.id
     eventTitleLabel.text = event.title
+    eventTitleLabel.hero.id = event.id
     let rating = event.chef?.reviewsAverageRate ?? 0
     ratingView.rating = Double(rating)
     reviewsCountLabel.text = event.chef?.reviewsCount?.string

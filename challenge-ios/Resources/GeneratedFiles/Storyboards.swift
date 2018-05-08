@@ -55,6 +55,8 @@ internal extension UIViewController {
 internal enum StoryboardScene {
   internal enum CertainEvent: StoryboardType {
     internal static let storyboardName = "CertainEvent"
+
+    internal static let eventViewController = SceneType<challenge_ios.EventViewController>(storyboard: CertainEvent.self, identifier: "EventViewController")
   }
   internal enum Cities: StoryboardType {
     internal static let storyboardName = "Cities"
