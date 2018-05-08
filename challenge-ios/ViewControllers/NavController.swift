@@ -22,7 +22,7 @@ class NavController: UINavigationController, UIGestureRecognizerDelegate {
                                color: .white)
     navigationBar.barTintColor = .mainGreen
     navigationBar.tintColor = .white
-    interactivePopGestureRecognizer?.delegate = self
+//    interactivePopGestureRecognizer?.delegate = self
   }
   
   override var preferredStatusBarStyle: UIStatusBarStyle {

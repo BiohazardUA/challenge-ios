@@ -12,16 +12,16 @@ class CitiesViewController: UIViewController {
 
   @IBAction func hamburgTapped() {
     let vc = EventsViewController.storyboardInstance(with: .hamburg)
-    show(vc, sender: nil)
+    show(vc)
   }
   
   @IBAction func kolnTapped() {
     let vc = EventsViewController.storyboardInstance(with: .koln)
-    show(vc, sender: nil)
+    show(vc)
   }
   
   @IBAction func allTapped() {
     let vc = EventsViewController.storyboardInstance(with: .all)
-    show(vc, sender: nil)
+    show(vc)
   }
 }

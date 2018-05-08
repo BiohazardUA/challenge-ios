@@ -40,6 +40,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="BT7-zw-P48" firstAttribute="trailing" secondItem="0KM-v9-vml" secondAttribute="trailing" id="4yt-LM-H1w"/>
                             <constraint firstItem="BT7-zw-P48" firstAttribute="leading" secondItem="0KM-v9-vml" secondAttribute="leading" id="Fcd-fX-QSz"/>
@@ -47,6 +48,12 @@
                             <constraint firstItem="BT7-zw-P48" firstAttribute="top" secondItem="0KM-v9-vml" secondAttribute="top" id="fbh-fa-VKC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0KM-v9-vml"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="superview"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cFb-bx-OSK" appends="YES" id="85h-WY-ApZ"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="GkF-B7-dFG"/>
                     <connections>
@@ -54,6 +61,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ttx-p1-l9m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="cFb-bx-OSK">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="screenEdgePaned:" destination="voa-fc-CPN" id="9T2-F3-5F2"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="424.80000000000001" y="76.911544227886068"/>
         </scene>

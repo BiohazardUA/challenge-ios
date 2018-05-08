@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventsViewController: UIViewController {
+class EventsViewController: TransitionViewController {
   @IBOutlet private weak var tableView: UITableView! {
     didSet {
       tableView.register(nib: EventCell.nib(),

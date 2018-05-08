@@ -71,7 +71,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0, -200) duration(1.0)"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0, -200) duration(0.5)"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="hamburgTapped" destination="SZY-Jk-dGh" eventType="touchUpInside" id="NQV-KG-r01"/>
@@ -135,7 +135,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0, 200) duration(1.0)"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="translate(0, 200) duration(0.5)"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="allTapped" destination="SZY-Jk-dGh" eventType="touchUpInside" id="nf9-H1-Poc"/>
@@ -156,6 +156,9 @@
                             <constraint firstItem="ztA-MR-z2x" firstAttribute="leading" secondItem="ap6-NK-LvK" secondAttribute="leading" id="pDG-wf-bEY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="91W-KD-RtX"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="superview"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" title="Select you city" id="h7T-ln-TjW"/>
                 </viewController>
