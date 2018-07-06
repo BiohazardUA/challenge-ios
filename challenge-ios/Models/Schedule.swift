@@ -9,7 +9,6 @@
 import Foundation 
 import ObjectMapper
 
-
 class Schedule : NSObject, NSCoding, Mappable {
   var currency : Currency?
   var eventDeadline : String?

@@ -18,10 +18,6 @@ class EventCell: UITableViewCell {
   @IBOutlet private weak var reviewsCountLabel: UILabel!
   @IBOutlet private weak var priceLabel: UILabel!
   
-  static func nib() -> UINib? {
-    return UINib(nibName: String(describing: self), bundle: nil)
-  }
-  
   override func awakeFromNib() {
     super.awakeFromNib()
     bgView.decorator
@@ -29,8 +25,9 @@ class EventCell: UITableViewCell {
                              color: .black,
                              cornerRadius: 8))
     gradientBottomView.decorator
-      .apply(Style.addGradientToCellBottom(topColor: UIColor.white.withAlphaComponent(0),
-                                           bottomColor: .black))
+      .apply(Style
+        .addGradientToCellBottom(topColor: UIColor.white.withAlphaComponent(0),
+                                 bottomColor: .black))
   }
 
   public func configure(with event: EventItem) {
@@ -38,14 +35,14 @@ class EventCell: UITableViewCell {
       eventImageView.kf.setImage(with: URL(string: imageLink),
                                  options: [.transition(.fade(0.3))])
     }
-    eventImageView.hero.id = event.id
+    eventImageView.hero.id = "image_\(event.id.orEmpty)"
     eventTitleLabel.text = event.title
-    eventTitleLabel.hero.id = event.id
+    gradientBottomView.hero.id = "title_\(event.id.orEmpty)"
     let rating = event.chef?.reviewsAverageRate ?? 0
     ratingView.rating = Double(rating)
     reviewsCountLabel.text = event.chef?.reviewsCount?.string
-    let currency = event.schedules?.first?.currency?.symbol ?? ""
-    let price = event.schedules?.first?.price?.amount?.string ?? ""
+    let currency = (event.schedules?.first?.currency?.symbol).orEmpty
+    let price = (event.schedules?.first?.price?.amount?.string).orEmpty
     priceLabel.text = currency + " " + price
   }
 }

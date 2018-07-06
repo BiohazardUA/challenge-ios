@@ -33,16 +33,16 @@ class EventsFeedModel: NSObject {
     super.init()
   }
   
-  func clear() {
+  public func clear() {
     lastPage.value = nil
     events.value = []
   }
   
-  func getEvents() -> [EventItem]? {
+  public func getEvents() -> [EventItem]? {
     return events.value
   }
   
-  func haveNextPage() -> Bool {
+  public func haveNextPage() -> Bool {
     let total = lastPage.value?.data?.count ?? 0
     return getEventsCount() < total
   }
@@ -53,7 +53,7 @@ class EventsFeedModel: NSObject {
     return Int(currentPageNumber) + 1
   }
   
-  func getEventsCount() -> Int {
+  public func getEventsCount() -> Int {
     return events.value == nil ? 0 : events.value!.count
   }
   
@@ -74,13 +74,13 @@ class EventsFeedModel: NSObject {
     }
   }
   
-  func requestNextPage() {
+  public func requestNextPage() {
     guard loadingState.value != .loading else { return }
     Observable
       .just((itemsCount: itemsToFetch,
              pageNumber: getNextPageNumber(),
              cityID: cityID),
-            scheduler: SerialDispatchQueueScheduler(qos: .background))
+            scheduler: ConcurrentDispatchQueueScheduler(qos: .background))
       .do() { [weak self] in
         self?.loadingState.value = .loading
       }
@@ -91,7 +91,7 @@ class EventsFeedModel: NSObject {
           .share(replay: 1)
       }
       .mapObject(EventsPagination.self)
-      .observeOn(MainScheduler.instance)
+      .observeOn(ConcurrentMainScheduler.instance)
       .subscribe { [weak self] (event) in
         switch event {
         case .next(let pagination):

@@ -58,7 +58,7 @@ struct Style {
   static func bottomGradient(with activityView: UIActivityIndicatorView,
                              maxYpos: CGFloat) -> Decoration<UIView> {
     return { (view: UIView) in
-      let bottomFrame = CGRect(x: 0, y: maxYpos, width: UIScreen.main.bounds.width, height: 100)
+      let bottomFrame = CGRect(x: 0, y: maxYpos - 140, width: UIScreen.main.bounds.width, height: 100)
       let gradientBottomView = UIView(frame: bottomFrame)
       gradientBottomView.backgroundColor = .clear
       gradientBottomView.decorator.apply(Style.addGradient(topColor: UIColor.white.withAlphaComponent(0),

@@ -33,8 +33,8 @@ class EventViewController: TransitionViewController {
   }
   
   private func refreshUI() {
-    eventImageView.hero.id = event.id
-    eventTitleLabel.hero.id = event.id
+    eventImageView.hero.id = "image_\(event.id.orEmpty)"
+    eventTitleLabel.hero.id = "title_\(event.id.orEmpty)"
     if let imageLink = event.images?.first?.imageUrl {
       eventImageView.kf.setImage(with: URL(string: imageLink),
                                  options: [.transition(.fade(0.3))])

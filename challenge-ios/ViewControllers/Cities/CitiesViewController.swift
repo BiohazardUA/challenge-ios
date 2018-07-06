@@ -10,17 +10,17 @@ import UIKit
 
 class CitiesViewController: UIViewController {
 
-  @IBAction func hamburgTapped() {
+  @IBAction private func hamburgTapped() {
     let vc = EventsViewController.storyboardInstance(with: .hamburg)
     show(vc)
   }
   
-  @IBAction func kolnTapped() {
+  @IBAction private func kolnTapped() {
     let vc = EventsViewController.storyboardInstance(with: .koln)
     show(vc)
   }
   
-  @IBAction func allTapped() {
+  @IBAction private func allTapped() {
     let vc = EventsViewController.storyboardInstance(with: .all)
     show(vc)
   }

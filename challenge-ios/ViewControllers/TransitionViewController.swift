@@ -10,7 +10,7 @@ import Hero
 
 class TransitionViewController: UIViewController {
 
-  @IBAction func screenEdgePaned(_ panGR: UIScreenEdgePanGestureRecognizer) {
+  @IBAction private func screenEdgePaned(_ panGR: UIScreenEdgePanGestureRecognizer) {
     let translation = panGR.translation(in: nil)
     let progress = translation.x / view.bounds.width
     switch panGR.state {

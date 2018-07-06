@@ -11,8 +11,9 @@ import UIKit
 class EventsViewController: TransitionViewController {
   @IBOutlet private weak var tableView: UITableView! {
     didSet {
-      tableView.register(nib: EventCell.nib(),
-                         withCellClass: EventCell.self)
+      tableView.register(nibWithCellClass: EventCell.self)
+      tableView.estimatedRowHeight = 200
+      tableView.height = UITableViewAutomaticDimension
       tableView.rx.setDelegate(self).disposed(by: rx.disposeBag)
     }
   }
@@ -38,12 +39,10 @@ class EventsViewController: TransitionViewController {
                               action: #selector(refreshEvents),
                               for: .valueChanged)
     tableView.addSubview(refreshControl)
-    tableView.rowHeight = UITableViewAutomaticDimension
-    tableView.estimatedRowHeight = 200
-    tableView.contentInset = UIEdgeInsets(top: 5, left: 0, bottom: 60, right: 0)
+    tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 50, right: 0)
     bottomActivityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
     view.decorator.apply(Style.bottomGradient(with: bottomActivityView,
-                                              maxYpos: tableView.bounds.maxY))
+                                              maxYpos: UIScreen.main.bounds.maxY))
     binds()
     viewModel.requestNextPage()
   }
@@ -70,7 +69,6 @@ class EventsViewController: TransitionViewController {
           strongSelf.tableView.deselectRow(at: selectedRow,
                                            animated: true)
         }
-        //TODO:- show single event
         let vc = EventViewController.storyboardInstance(with: event)
         strongSelf.show(vc)
       })
@@ -91,11 +89,6 @@ class EventsViewController: TransitionViewController {
 }
 
 extension EventsViewController: UITableViewDelegate {
-  
-  func tableView(_ tableView: UITableView,
-                 heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return UITableViewAutomaticDimension
-  }
   
   func tableView(_ tableView: UITableView,
                  willDisplay cell: UITableViewCell,

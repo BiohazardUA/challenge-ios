@@ -47,6 +47,7 @@
 		0E78B23C20A1BDB700509C55 /* CertainEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E78B23B20A1BDB700509C55 /* CertainEvent.storyboard */; };
 		0E78B23E20A1BF1500509C55 /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E78B23D20A1BF1500509C55 /* TransitionViewController.swift */; };
 		0E78B24020A1C80F00509C55 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E78B23F20A1C80F00509C55 /* DateHelper.swift */; };
+		0EE43A3920EF818300813977 /* String+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE43A3820EF818300813977 /* String+Optional.swift */; };
 		FE6DAC350257928F24518B61 /* Pods_challenge_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42EB846D4093B2D9F3BC5B65 /* Pods_challenge_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		0E78B23B20A1BDB700509C55 /* CertainEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CertainEvent.storyboard; sourceTree = "<group>"; };
 		0E78B23D20A1BF1500509C55 /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
 		0E78B23F20A1C80F00509C55 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		0EE43A3820EF818300813977 /* String+Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Optional.swift"; sourceTree = "<group>"; };
 		3E8F73CF1E8C86A8B1BDBB0A /* Pods-challenge-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-challenge-ios/Pods-challenge-ios.release.xcconfig"; sourceTree = "<group>"; };
 		42EB846D4093B2D9F3BC5B65 /* Pods_challenge_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_challenge_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5BC16E7F387E2CDB030BD11 /* Pods-challenge-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-challenge-ios/Pods-challenge-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			children = (
 				0E78B21A20A1833200509C55 /* UIColor.swift */,
 				0E78B23620A1BC2C00509C55 /* UIViewController+hero.swift */,
+				0EE43A3820EF818300813977 /* String+Optional.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				0E78B23E20A1BF1500509C55 /* TransitionViewController.swift in Sources */,
 				0E78B22E20A1B55A00509C55 /* CitiesViewController.swift in Sources */,
 				0E2B9B0620A09758001780E4 /* EventsData.swift in Sources */,
+				0EE43A3920EF818300813977 /* String+Optional.swift in Sources */,
 				0E78B22320A185F300509C55 /* Styles.swift in Sources */,
 				0E2B9AC720A083EF001780E4 /* AppDelegate.swift in Sources */,
 				0E2B9AE620A08B71001780E4 /* ApiKeys.swift in Sources */,
